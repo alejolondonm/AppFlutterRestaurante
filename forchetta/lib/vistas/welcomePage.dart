@@ -62,7 +62,7 @@ class WelcomePage extends StatelessWidget {
                   },
                 ),
               );
-            }, Color(0xFFF3A05B), "Iniciar Sesión", "seriously", 15),
+            }, Color(0xFFF3A05B), "Iniciar Sesión", "seriously", 15, 180, 40),
             Spacer(flex: 1),
             largeButton(() {
               Navigator.push(
@@ -73,7 +73,7 @@ class WelcomePage extends StatelessWidget {
                   },
                 ),
               );
-            }, Colors.transparent, "Ver Menú", "seriously", 15),
+            }, Colors.transparent, "Ver Menú", "seriously", 15, 180, 40),
             Spacer(flex: 1),
             largeButton(() {
               Navigator.push(
@@ -84,7 +84,7 @@ class WelcomePage extends StatelessWidget {
                   },
                 ),
               );
-            }, Color(0xFFF3A05B), "Registrarse", "seriously", 15),
+            }, Color(0xFFF3A05B), "Registrarse", "seriously", 15, 180, 40),
             Spacer(flex: 2),
           ],
         ),

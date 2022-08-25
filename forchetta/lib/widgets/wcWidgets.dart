@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 GestureDetector largeButton(VoidCallback function, Color bgColor, String text,
-    String tipo_letra, double tam) {
+    String tipo_letra, double tam, double w, double h) {
   return GestureDetector(
     onTap: function,
     child: Container(
-      width: 180,
-      height: 40,
+      width: w,
+      height: h,
       decoration: BoxDecoration(
         color: bgColor,
         borderRadius: BorderRadius.circular(10),
@@ -60,5 +60,19 @@ Text subTitleText2(String text, double tam) {
       fontWeight: FontWeight.w300,
     ),
     textAlign: TextAlign.center,
+  );
+}
+
+GestureDetector addCarta(VoidCallback function) {
+  return GestureDetector(
+    onTap: function,
+    child: Container(
+      child: Center(
+        child: Image(
+          image: AssetImage('assets/add.png'),
+          width: 20,
+        ),
+      ),
+    ),
   );
 }

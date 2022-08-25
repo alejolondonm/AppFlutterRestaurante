@@ -28,7 +28,23 @@ flutter:
   assets:
     - assets/pizza2.png
     - assets/pizza.png
+    - assets/pizza4.png
+    - assets/pizza5.png
+    - assets/pizza6.png
+    - assets/pin.png
+    - assets/pizzam.png
     - assets/italy.png
+    - assets/albon.jpeg
+    - assets/carpaccio.jpg
+    - assets/ensalada.jpg
+    - assets/lasagna.png
+    - assets/margarita.jpg
+    - assets/piadi.jpg
+    - assets/spag.jpg
+    - assets/spag2.jpg
+    - assets/add.png
+    - assets/spaghetti.png
+
 
   fonts:
     - family: Lobster

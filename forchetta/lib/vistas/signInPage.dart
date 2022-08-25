@@ -45,7 +45,7 @@ class SignInPage extends StatelessWidget {
                     },
                   ),
                 );
-              }, Color(0xFFF3A05B), "Hacer Reserva", "seriously", 15),
+              }, Color(0xFFF3A05B), "Hacer Reserva", "seriously", 15, 180, 40),
               Spacer(flex: 1),
               largeButton(() {
                 Navigator.push(
@@ -56,7 +56,7 @@ class SignInPage extends StatelessWidget {
                     },
                   ),
                 );
-              }, Colors.transparent, "Ver Menú", "seriously", 15),
+              }, Colors.transparent, "Ver Menú", "seriously", 15, 180, 40),
               Spacer(flex: 1),
               largeButton(() {
                 Navigator.push(
@@ -67,7 +67,7 @@ class SignInPage extends StatelessWidget {
                     },
                   ),
                 );
-              }, Color(0xFFF3A05B), "Nuestras Sedes", "seriously", 15),
+              }, Color(0xFFF3A05B), "Nuestras Sedes", "seriously", 15, 180, 40),
               Spacer(flex: 1),
             ],
           ),
