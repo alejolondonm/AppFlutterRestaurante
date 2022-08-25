@@ -77,9 +77,15 @@ class MenuPage extends StatelessWidget {
                   subTitleText(" Lasaña Carbonara   ", 'seriously', 15),
                   subTitleText(r'22.000$', 'seriously', 15),
                   Spacer(flex: 1),
-                  largeButton(() {}, Color(0xFFF3A05B), "Ordenar", 'seriously',
-                      15, 100, 40),
-                  subTitleText("", '', 20)
+                  SizedBox(
+                    height: screenH * 0.02,
+                    width: screenW * 0.4,
+                    child: Container(
+                      height: screenH * 0.02,
+                      color: Colors.blue,
+                    ),
+                  ),
+                  Spacer(flex: 1),
                 ],
               ),
               Column(

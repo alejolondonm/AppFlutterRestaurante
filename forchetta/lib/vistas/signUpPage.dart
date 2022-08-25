@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:forchetta/widgets/wcWidgets.dart';
 
 class SignUpPage extends StatelessWidget {
   SignUpPage({Key? key}) : super(key: key);
@@ -20,6 +21,72 @@ class SignUpPage extends StatelessWidget {
           decoration: BoxDecoration(
               color: Color(0xFFFFEED5),
               borderRadius: BorderRadius.circular(10)),
+          child: Column(
+            children: [
+              subTitleText("Ben Arrivato!", 'Seriously', 30),
+              subTitleText("Llena todos los campos \npara crear tu cuenta",
+                  'Seriously', 15),
+              Spacer(flex: 1),
+              SizedBox(
+                width: 180,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Nombre Completo",
+                  ),
+                ),
+              ),
+              Spacer(flex: 1),
+              SizedBox(
+                width: 180,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Cédula",
+                  ),
+                ),
+              ),
+              Spacer(flex: 1),
+              SizedBox(
+                width: 180,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Nombre de usuario",
+                  ),
+                ),
+              ),
+              Spacer(flex: 1),
+              SizedBox(
+                width: 180,
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    hintText: "Contraseña",
+                  ),
+                ),
+              ),
+              Spacer(flex: 1),
+              SizedBox(
+                width: 180,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Correo",
+                  ),
+                ),
+              ),
+              Spacer(flex: 1),
+              SizedBox(
+                width: 180,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Celular",
+                  ),
+                ),
+              ),
+              Spacer(flex: 1),
+              largeButton(() {}, Color(0xFFF3A05B), "Crea tu cuenta",
+                  'Seriously', 18, 200, 40),
+              Spacer(flex: 1),
+            ],
+          ),
         ),
       ),
       appBar: PreferredSize(
