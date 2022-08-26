@@ -1,13 +1,18 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 import 'package:forchetta/vistas/reservas.dart';
 import 'package:forchetta/widgets/wcWidgets.dart';
 
-class MenuPage extends StatelessWidget {
-  MenuPage({Key? key}) : super(key: key);
-  double screenH = 0.0, screenW = 0.0;
+class MenuCarta extends StatefulWidget {
+  const MenuCarta({Key? key}) : super(key: key);
 
+  @override
+  State<MenuCarta> createState() => _MenuCarta();
+}
+
+class _MenuCarta extends State<MenuCarta> {
+  double screenH = 0.0, screenW = 0.0;
   @override
   Widget build(BuildContext context) {
     screenH = MediaQuery.of(context).size.height;
@@ -69,7 +74,7 @@ class MenuPage extends StatelessWidget {
                   subTitleText(r'31.000$', 'seriously', 15),
                   Spacer(flex: 1),
                   subTitleText(" Pizza mariscos  ", 'seriously', 15),
-                  subTitleText(r'31.000$', 'seriously', 15),
+                  subTitleText(r'48.000$', 'seriously', 15),
                   Spacer(flex: 1),
                   subTitleText(" Espaguetis Boloñesa       ", 'seriously', 15),
                   subTitleText(r'22.000$', 'seriously', 15),
@@ -77,29 +82,69 @@ class MenuPage extends StatelessWidget {
                   subTitleText(" Lasaña Carbonara   ", 'seriously', 15),
                   subTitleText(r'22.000$', 'seriously', 15),
                   Spacer(flex: 1),
-                  SizedBox(
-                    height: screenH * 0.02,
-                    width: screenW * 0.4,
-                    child: Container(
-                      height: screenH * 0.02,
-                      color: Colors.blue,
-                    ),
-                  ),
+                  largeButton(() {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: subTitleText(
+                            '¡Platos exitosamente agregados!\nbuon appetito!',
+                            'Seriously',
+                            15)));
+                  }, Color(0xFFF3A05B), 'Añadir al Carrito', 'Seriously', 15,
+                      160, 30),
                   Spacer(flex: 1),
                 ],
               ),
               Column(
                 children: [
                   Spacer(flex: 1),
-                  addCarta(() {}),
+                  addCarta(() {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: subTitleText(
+                          'Pizza margarita agregada al carrito',
+                          'Seriously',
+                          15),
+                      duration: Duration(seconds: 1),
+                    ));
+                  }),
                   Spacer(flex: 1),
-                  addCarta(() {}),
+                  addCarta(() {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: subTitleText(
+                          'Pizza tres carnes agregada al carrito',
+                          'Seriously',
+                          15),
+                      duration: Duration(seconds: 1),
+                    ));
+                  }),
                   Spacer(flex: 1),
-                  addCarta(() {}),
+                  addCarta(() {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: subTitleText(
+                          'Pizza mariscos agregada al carrito',
+                          'Seriously',
+                          15),
+                      duration: Duration(seconds: 1),
+                    ));
+                  }),
                   Spacer(flex: 1),
-                  addCarta(() {}),
+                  addCarta(() {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: subTitleText(
+                          'Espaguetis boloñesa agregados al carrito',
+                          'Seriously',
+                          15),
+                      duration: Duration(seconds: 1),
+                    ));
+                  }),
                   Spacer(flex: 1),
-                  addCarta(() {}),
+                  addCarta(() {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: subTitleText(
+                          'Lasaña carbonara agregada al carrito',
+                          'Seriously',
+                          15),
+                      duration: Duration(seconds: 1),
+                    ));
+                  }),
                   Spacer(flex: 1),
                   Spacer(flex: 1),
                 ],

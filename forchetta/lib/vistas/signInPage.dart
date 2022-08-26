@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:forchetta/vistas/menuPage.dart';
+import 'package:forchetta/vistas/menuCarta.dart';
 import 'package:forchetta/vistas/reservas.dart';
 import 'package:forchetta/vistas/sedes.dart';
 import 'package:forchetta/widgets/wcWidgets.dart';
@@ -52,7 +52,7 @@ class SignInPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return MenuPage();
+                      return MenuCarta();
                     },
                   ),
                 );
