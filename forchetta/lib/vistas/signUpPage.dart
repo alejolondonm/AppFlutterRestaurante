@@ -82,8 +82,15 @@ class SignUpPage extends StatelessWidget {
                 ),
               ),
               Spacer(flex: 1),
-              largeButton(() {}, Color(0xFFF3A05B), "Crea tu cuenta",
-                  'Seriously', 18, 200, 40),
+              largeButton(() {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: subTitleText(
+                      '¡Lista tu Cuenta!\nNoi ti aspetteremo!',
+                      'Seriously',
+                      15),
+                  duration: Duration(seconds: 3),
+                ));
+              }, Color(0xFFF3A05B), "Crea tu cuenta", 'Seriously', 18, 200, 40),
               Spacer(flex: 1),
             ],
           ),
